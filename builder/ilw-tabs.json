@@ -1,9 +1,9 @@
 {
-    "title": "<%= _.startCase(name.slice(4)) %>",
-    "tag": "<%= name %>",
-    "github": "https://github.com/web-illinois/<%= name %>/",
+    "title": "Tabs",
+    "tag": "ilw-tabs",
+    "github": "https://github.com/web-illinois/ilw-tabs/",
     "type": "web component",
-    "element-name": "<%= name %>",
+    "element-name": "ilw-tabs",
     "description": "Description for builder.",
     "toolkit-version": "",
     "production-version": "",

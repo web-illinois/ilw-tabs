@@ -1,13 +1,13 @@
 {
-    "name": "@illinois-toolkit/<%= name %>",
+    "name": "@illinois-toolkit/ilw-tabs",
     "description": "One paragraph description of the component.",
-    "repository": "github:<%= repository %>",
+    "repository": "github:web-illinois/ilw-tabs",
     "private": false,
     "version": "0.0.1",
     "type": "module",
     "exports": {
         ".": {
-            "import": "./src/<%= name %>.js"
+            "import": "./src/ilw-tabs.js"
         }
     },
     "scripts": {
