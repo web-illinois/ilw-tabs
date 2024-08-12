@@ -31,19 +31,19 @@ The `ilw-tabs` component has the following attributes:
 <h2 id="tab-header">Programs</h2>
 <ilw-tabs aria-labelledby="tab-header">
     <div slot="tabs">
-        <button role="tab" aria-controls="tab-panel1">Degree Programs</button>
-        <button role="tab" aria-controls="tab-panel2">Non-degree Programs</button>
-        <button role="tab" aria-controls="tab-panel3">Classroom Experience</button>
+        <button role="tab" aria-controls="tab-panel1" id="tab-button1">Degree Programs</button>
+        <button role="tab" aria-controls="tab-panel2" id="tab-button2">Non-degree Programs</button>
+        <button role="tab" aria-controls="tab-panel3" id="tab-button3">Classroom Experience</button>
     </div>
-    <div id="tab-panel1">
+    <div id="tab-panel1" role="tabpanel" labelled-by="tab-button1">
       <h3>Degree Programs</h3>
       <!-- ... --->
     </div>
-    <div id="tab-panel2">
+    <div id="tab-panel2" role="tabpanel" labelled-by="tab-button2">
       <h3>Non-degree Programs</h3>
       <!-- ... --->
     </div>
-    <div id="tab-panel3">
+    <div id="tab-panel3" role="tabpanel" labelled-by="tab-button3">
       <h3>Classroom Experience</h3>
       <!-- ... --->
     </div>
