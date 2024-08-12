@@ -30,7 +30,7 @@ The `ilw-tabs` component has the following attributes:
 ```html
 <h2 id="tab-header">Programs</h2>
 <ilw-tabs aria-labelledby="tab-header">
-    <div slot="tabs">
+    <div slot="tabs" role="tablist">
         <button role="tab" aria-controls="tab-panel1" id="tab-button1">Degree Programs</button>
         <button role="tab" aria-controls="tab-panel2" id="tab-button2">Non-degree Programs</button>
         <button role="tab" aria-controls="tab-panel3" id="tab-button3">Classroom Experience</button>
