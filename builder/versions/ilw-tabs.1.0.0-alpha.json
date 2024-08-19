@@ -11,7 +11,7 @@
     "js": "https://dev.toolkit.illinois.edu/ilw-tabs/1.0.0-alpha/ilw-tabs.js",
     "production": false,
     "notes": "",
-    "parent-style": "",
+    "parent-style": "margin: 0 auto; max-width: 1200px;",
     "samples": [
         {
             "name": "default",
@@ -31,12 +31,12 @@
     "attributes": [
         {
             "name": "theme",
-            "description": "Color theme used",
+            "description": "Color theme used. There is no orange theme because there would be a lot of bright colors on the screen.",
             "depreciated": false,
             "values": [
                 "",
                 "blue",
-                "orange",
+                "gray",
                 "white"
             ]
         },
