@@ -4,7 +4,7 @@
     "github": "https://github.com/web-illinois/ilw-tabs/",
     "type": "web component",
     "element-name": "ilw-tabs",
-    "description": "Description for builder.",
+    "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "1.0.0-alpha"
