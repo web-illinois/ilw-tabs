@@ -28,7 +28,6 @@ class Tabs extends LitElement {
         this.handleResize = this.handleResize.bind(this);
         this.handleTabClick = this.handleTabClick.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
-        document.addEventListener('DOMContentLoaded', this.handleDocumentLoaded.bind(this));
     }
 
     connectedCallback() {
@@ -37,6 +36,7 @@ class Tabs extends LitElement {
             this.addResizeListeners();
         }
         this.addMutationObserver();
+        this.handleDocumentLoaded();
     }
     
     disconnectedCallback() {
@@ -141,14 +141,14 @@ class Tabs extends LitElement {
     render() {
         return html`
         <div id="outer" class="${this.theme} ${this.width} ${this.horizontal ? 'horizontal' : ''}">
-        <div id="container" class="${this.theme} ${this.width}">
-            <div id="tablist" role="tablist">
-                <slot name="tabs"></slot>
+            <div id="container" class="${this.theme} ${this.width}">
+                <div id="tablist" role="tablist">
+                    <slot name="tabs"></slot>
+                </div>
+                <div id="tabpanels">
+                    <slot></slot>
+                </div>
             </div>
-            <div id="tabpanels">
-                <slot></slot>
-            </div>
-        </div>
         </div>`;
     }
 }
