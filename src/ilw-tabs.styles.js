@@ -60,6 +60,7 @@ export default css `
 
     .horizontal #tablist {
         border-bottom: var(--ilw-tabs--button--border);
+        margin-bottom: 20px;
     }
 
     #tabpanels {
@@ -74,6 +75,14 @@ export default css `
             --ilw-tabs--tablist--width: auto;
             padding: 60px 20px 75px;
         }
+
+        #tablist {
+            margin-bottom: 20px;
+        }
+
+        .horizontal #tablist {
+            border-bottom: none;
+        }
      }
     
       #container.compact {
@@ -81,5 +90,13 @@ export default css `
         --ilw-tabs--tablist--display: flex;
         --ilw-tabs--tablist--width: auto;
         padding: 60px 20px 75px;
+    }
+
+    #container.compact #tablist {
+        margin-bottom: 20px;
+    }
+
+    #container.compact .horizontal #tablist {
+        border-bottom: none;
     }
 `;

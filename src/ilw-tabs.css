@@ -79,6 +79,11 @@ ilw-tabs *[data-ilw-tab-visible="0"] {
       width: var(--ilw-tabs--tablist--width);
       border-bottom: var(--ilw-tabs--button--border);
     }
+    ilw-tabs[horizontal] *[role=tab] {
+      display: var(--ilw-tabs--tablist--display);
+      width: var(--ilw-tabs--tablist--width);
+      border-bottom: var(--ilw-tabs--button--border);
+    }
 
     ilw-tabs *[role=tab]:first-of-type {
       border-top: var(--ilw-tabs--button--border);
