@@ -20,6 +20,12 @@ export default css `
         --ilw-tabs--button--color--selected--focus: white;
         --ilw-tabs--button--background--selected--focus: var(--il-blue);
         --ilw-tabs--button--border: 2px solid var(--il-blue);
+        --ilw-button--background-color: #fff;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-blue);
     }
     #container.gray {
         --ilw-tabs--color: black;
@@ -31,6 +37,12 @@ export default css `
         --ilw-tabs--button--color--selected--focus: white;
         --ilw-tabs--button--background--selected--focus: var(--il-blue);
         --ilw-tabs--button--border: 2px solid var(--il-blue);
+        --ilw-button--background-color: #fff;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-blue);
     }
 
     #outer.white {

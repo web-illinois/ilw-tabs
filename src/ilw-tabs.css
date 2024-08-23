@@ -18,6 +18,12 @@ ilw-tabs {
     display: block;
     position: relative;
     container-type: inline-size;
+    --ilw-button--background-color: #fff;
+    --ilw-button--foreground-color: var(--il-orange);
+    --ilw-button--border-color: var(--il-orange);
+    --ilw-button--focused-background-color: var(--il-orange);
+    --ilw-button--focused-foreground-color: #fff;
+    --ilw-button--focused-border-color: var(--il-orange);
 }
 
 ilw-tabs *[slot=tabs] {
