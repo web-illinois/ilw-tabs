@@ -1,19 +1,27 @@
 {
     "name": "@illinois-toolkit/ilw-tabs",
-    "description": "One paragraph description of the component.",
+    "description": "Illinois Toolkit: This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "repository": "github:web-illinois/ilw-tabs",
     "private": false,
-    "version": "0.0.1",
+    "version": "1.0.0-alpha",
     "type": "module",
+    "files": [
+        "src/**",
+        "dist/**",
+        "builder/**"
+    ],
     "exports": {
         ".": {
-            "import": "./src/ilw-tabs.js"
+            "import": "./src/ilw-tabs.js",
+            "require": "./dist/ilw-tabs.cjs",
+            "default": "./dist/ilw-tabs.js"
         }
     },
     "scripts": {
         "dev": "vite",
         "build": "vite build --config vite.build.config.js --emptyOutDir",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prepack": "npm run build"
     },
     "dependencies": {
         "lit": "3.1.3"
