@@ -20,7 +20,7 @@ The `ilw-tabs` component has the following slots:
 * `tabs`: the list of buttons to display. This slot should only contain the `button` element. 
 
 The `ilw-tabs` component has the following attributes:
-* `theme`: the theme/background of the content. Options are `blue`, `orange`, `gray`, `white`
+* `theme`: the theme/background of the content. Options are `blue`, `gray`, `white`. Defaults to `white`. 
 * `width`: whether or not this is contained in the parent (default), if it will expand to full width (`full`), or if just the background will expand and the text will be in a narrow window (`auto`). 
 * `horizontal`: a boolean attribute that determines if the tabs are displayed in a horizontal view. Use this only if you have a few tabs in the list, as this is limited to a single row and may cause text to be truncated or displayed awkwardly. The default is to list the tabs vertically on the left-hand side, and in mobile view, both views will collapse to an accordion-like view.  
 * `default`: the ID of the tab that should be opened on page load. This will default to the first tab. 
@@ -52,7 +52,7 @@ The `ilw-tabs` component has the following attributes:
 
 ## Accessibility Notes and Use
 
-The tabs are automatically activated when the user chooses an item. 
+The tabs are activated using the ARIA automatic tab pattern.  
 
 Ensure that the buttons and panels are labelled correctly inside the component using the `id` and `aria-labelledby` attributes. IDs should be unique in the HTML document. 
 

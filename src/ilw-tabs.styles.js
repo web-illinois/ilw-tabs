@@ -12,37 +12,28 @@ export default css `
 
     #container.white {
         --ilw-tabs--color: black;
-        --ilw-tabs--button--color: var(--il-blue);
-        --ilw-tabs--button--color--focus: white;
-        --ilw-tabs--button--background--focus: var(--il-blue);
-        --ilw-tabs--button--color--selected: var(--il-blue);
-        --ilw-tabs--button--background--selected: var(--il-orange);
-        --ilw-tabs--button--color--selected--focus: white;
-        --ilw-tabs--button--background--selected--focus: var(--il-blue);
-        --ilw-tabs--button--border: 2px solid var(--il-blue);
-        --ilw-button--background-color: #fff;
-        --ilw-button--foreground-color: var(--il-blue);
-        --ilw-button--border-color: var(--il-blue);
-        --ilw-button--focused-background-color: var(--il-blue);
-        --ilw-button--focused-foreground-color: #fff;
-        --ilw-button--focused-border-color: var(--il-blue);
+        --ilw-tabs--button-color: var(--il-blue);
+        --ilw-tabs--button-color--focus: white;
+        --ilw-tabs--focus-button-background: var(--il-blue);
+        --ilw-tabs--selected-button-color: var(--il-blue);
+        --ilw-tabs--selected-button-background: var(--il-orange);
+        --ilw-tabs--button-border: 2px solid var(--il-blue);
     }
-    #container.gray {
-        --ilw-tabs--color: black;
-        --ilw-tabs--button--color: var(--il-blue);
-        --ilw-tabs--button--color--focus: white;
-        --ilw-tabs--button--background--focus: var(--il-blue);
-        --ilw-tabs--button--color--selected: var(--il-blue);
-        --ilw-tabs--button--background--selected: var(--il-orange);
-        --ilw-tabs--button--color--selected--focus: white;
-        --ilw-tabs--button--background--selected--focus: var(--il-blue);
-        --ilw-tabs--button--border: 2px solid var(--il-blue);
-        --ilw-button--background-color: #fff;
-        --ilw-button--foreground-color: var(--il-blue);
-        --ilw-button--border-color: var(--il-blue);
-        --ilw-button--focused-background-color: var(--il-blue);
-        --ilw-button--focused-foreground-color: #fff;
-        --ilw-button--focused-border-color: var(--il-blue);
+    #container.blue {
+        --ilw-tabs--color: white;
+        --ilw-tabs--background: var(--il-blue);
+        --ilw-tabs--button-color: white;
+        --ilw-tabs--button-border: 2px solid white;
+        --ilw-tabs--focus-button-color: var(--il-blue);
+        --ilw-tabs--focus-button-background: white;
+        --ilw-tabs--selected-button-color: white;
+        --ilw-tabs--selected-button-background: var(--il-orange);
+        --ilw-button--background-color: var(--il-blue);
+        --ilw-button--foreground-color: #fff;
+        --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-blue);
+        --ilw-button--focused-border-color: #fff;
     }
 
     #outer.white {
@@ -71,20 +62,19 @@ export default css `
     }
 
     .horizontal #tablist {
-        border-bottom: var(--ilw-tabs--button--border);
+        border-bottom: var(--ilw-tabs--button-border);
         margin-bottom: 20px;
     }
 
     #tabpanels {
         width: 100%;
-        margin-top: var(--ilw-tabs--tabpanels--margin-top);
     }
 
     @container (max-width: 800px) {
         #container {
             --ilw-tabs--display: block;
-            --ilw-tabs--tablist--display: flex;
-            --ilw-tabs--tablist--width: auto;
+            --ilw-tabs--tablist-display: flex;
+            --ilw-tabs--tablist-width: auto;
             padding: 60px 20px 75px;
         }
 
@@ -99,8 +89,8 @@ export default css `
     
       #container.compact {
         --ilw-tabs--display: block;
-        --ilw-tabs--tablist--display: flex;
-        --ilw-tabs--tablist--width: auto;
+        --ilw-tabs--tablist-display: flex;
+        --ilw-tabs--tablist-width: auto;
         padding: 60px 20px 75px;
     }
 
