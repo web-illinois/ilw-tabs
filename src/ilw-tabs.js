@@ -70,6 +70,14 @@ class Tabs extends LitElement {
     handleKeyPress(evt) {
         if (evt.code == 'Enter' || evt.code == 'Space') {
           this.setActiveTab(evt.currentTarget);
+        } else if (evt.code == 'ArrowUp' || evt.code == 'ArrowLeft') {
+            let prev = evt.currentTarget.previousElementSibling;
+            this.setActiveTab(prev);
+            prev.focus();
+        } else if (evt.code == 'ArrowDown' || evt.code == 'ArrowRight') {
+            let next = evt.currentTarget.nextElementSibling;
+            this.setActiveTab(next);
+            next.focus();
         }
     }
 
@@ -97,7 +105,7 @@ class Tabs extends LitElement {
     
     initializeTab(tab) {
         if (!this.tabIsInitialized(tab)) {
-          tab.setAttribute("tabindex", 0);
+          tab.setAttribute("tabindex", -1);
           tab.setAttribute('data-ilw-initialized', '1');
           tab.addEventListener('click', this.handleTabClick);
           tab.addEventListener('keydown', this.handleKeyPress);
@@ -118,7 +126,6 @@ class Tabs extends LitElement {
     }
     
     setActiveTab(activeTab) {
-        console.debug(activeTab);
         this.getAllTabs().forEach(tab => {
           (tab === activeTab) ? this.setTabAsActive(tab) : this.setTabAsInactive(tab)
         });
@@ -126,18 +133,20 @@ class Tabs extends LitElement {
     
     setTabAsActive(tab) {
         tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute("tabindex", 0);
         this.getTabPanel(tab).setAttribute('data-ilw-tab-visible', '1');
     }
     
     setTabAsInactive(tab) {
         tab.setAttribute('aria-selected', 'false');
+        tab.setAttribute("tabindex", -1);
         this.getTabPanel(tab).setAttribute('data-ilw-tab-visible', '0');
     }
     
     tabIsInitialized(tab) {
         return tab.hasAttribute('data-ilw-initialized');
     }
-        
+
     render() {
         return html`
         <div id="outer" class="${this.theme} ${this.width} ${this.horizontal ? 'horizontal' : ''}">
