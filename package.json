@@ -3,7 +3,8 @@
     "description": "Illinois Toolkit: This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "repository": "github:web-illinois/ilw-tabs",
     "private": false,
-    "version": "1.0.0-alpha1",
+    "license": "MIT",
+    "version": "1.0.0-beta",
     "type": "module",
     "files": [
         "src/**",
