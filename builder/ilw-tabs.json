@@ -7,5 +7,5 @@
     "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "toolkit-version": "",
     "production-version": "",
-    "development-version": "1.0.0-alpha1"
+    "development-version": "1.0-beta"
 }
