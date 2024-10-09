@@ -6,10 +6,10 @@
     "element-name": "ilw-tabs",
     "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "builder-version": "1.0-beta",
-    "version": "1.0.0-beta",
-    "date": "09/13/2024",
-    "css": "https://dev.toolkit.illinois.edu/ilw-tabs/1.0.0-beta/ilw-tabs.css",
-    "js": "https://dev.toolkit.illinois.edu/ilw-tabs/1.0.0-beta/ilw-tabs.js",
+    "version": "1.0.1-beta",
+    "date": "10/09/2024",
+    "css": "https://dev.toolkit.illinois.edu/ilw-tabs/1.0.1-beta/ilw-tabs.css",
+    "js": "https://dev.toolkit.illinois.edu/ilw-tabs/1.0.1-beta/ilw-tabs.js",
     "production": false,
     "notes": "",
     "parent-style": "margin: 0 auto; max-width: 1200px;",
@@ -43,12 +43,13 @@
         },
         {
             "name": "width",
-            "description": "Width -- constrained to the container (default), full width, or full width but text is constrained",
+            "description": "Width -- constrained to the container (default), full width, or full width but text is constrained (auto), or text is constrained to the page width (page).",
             "depreciated": false,
             "values": [
                 "",
                 "full",
-                "auto"
+                "auto",
+                "page"
             ]
         },
         {

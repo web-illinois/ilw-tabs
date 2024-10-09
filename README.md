@@ -21,7 +21,7 @@ The `ilw-tabs` component has the following slots:
 
 The `ilw-tabs` component has the following attributes:
 * `theme`: the theme/background of the content. Options are `blue`, `gray`, `white`. Defaults to `white`. 
-* `width`: whether or not this is contained in the parent (default), if it will expand to full width (`full`), or if just the background will expand and the text will be in a narrow window (`auto`). 
+* `width`: whether or not this is contained in the parent (default), if it will expand to full width (`full`), or if just the background will expand and the text will be in a narrow window (`auto`), or if it will autosize to a page format (`page`). 
 * `horizontal`: a boolean attribute that determines if the tabs are displayed in a horizontal view. Use this only if you have a few tabs in the list, as this is limited to a single row and may cause text to be truncated or displayed awkwardly. The default is to list the tabs vertically on the left-hand side, and in mobile view, both views will collapse to an accordion-like view.  
 * `default`: the ID of the tab that should be opened on page load. This will default to the first tab. 
 
