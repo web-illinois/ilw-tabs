@@ -10,7 +10,7 @@ export default css `
         padding: 60px 30px 75px;
     }
 
-    #container.white {
+    #outer.white, #container.white {
         --ilw-tabs--color: black;
         --ilw-tabs--button-color: var(--il-blue);
         --ilw-tabs--button-color--focus: white;
@@ -19,7 +19,7 @@ export default css `
         --ilw-tabs--selected-button-background: var(--il-orange);
         --ilw-tabs--button-border: 2px solid var(--il-blue);
     }
-    #container.blue {
+    #outer.blue, #container.blue {
         --ilw-tabs--color: white;
         --ilw-tabs--background: var(--il-blue);
         --ilw-tabs--button-color: white;
@@ -56,8 +56,12 @@ export default css `
         background: var(--ilw-tabs--background);
     }
 
-    #container.auto {
-        padding: 60px max(calc(1.875rem), calc(50px - 37.5rem)) 75px;
+    #outer.page {
+        background: var(--ilw-tabs--background);
+    }
+
+    #container.auto, #container.page {
+        padding: 60px var(--ilw-content--main-margin, 0) 75px;
         max-width: 1200px;
     }
 
