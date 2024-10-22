@@ -6,7 +6,7 @@
     "element-name": "ilw-tabs",
     "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "purpose": "Show content in a panel with tab navigation.",
-    "toolkit-version": "",
-    "production-version": "",
+    "toolkit-version": "1.0",
+    "production-version": "1.0",
     "development-version": "1.0-beta"
 }

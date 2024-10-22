@@ -1,0 +1,134 @@
+{
+    "title": "Tabs",
+    "tag": "ilw-tabs",
+    "github": "https://github.com/web-illinois/ilw-tabs/",
+    "type": "web component",
+    "element-name": "ilw-tabs",
+    "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
+    "builder-version": "1.0",
+    "version": "1.0.0",
+    "date": "10/22/2024",
+    "css": "https://cdn.toolkit.illinois.edu/ilw-tabs/1.0.0/ilw-tabs.css",
+    "js": "https://cdn.toolkit.illinois.edu/ilw-tabs/1.0.0/ilw-tabs.js",
+    "production": true,
+    "notes": "",
+    "parent-style": "margin: 0 auto; max-width: 1200px;",
+    "samples": [
+        {
+            "name": "default",
+            "description": "Default information",
+            "text": "<div slot='tabs'><button role='tab' aria-controls='panel1'>Tab #1</button><button role='tab' aria-controls='panel2'>Tab #2</button><button role='tab' aria-controls='panel3'>Tab #3</button><button role='tab' aria-controls='panel4'>Tab #4</button></div><div id='panel1'>  <h3>Degree Programs</h3>  <p>There's no <a href='#'>academic experience</a> quite like Grainger Engineering. Ranked the #6 college of engineering with 13 top 5 programs from US News and World Report, we have a reputation of being the best of the best. But a lot goes into those numbers. Engaging professors. State-of-the-art facilities. Groundbreaking student resources. Brilliant classmates. Supportive environment. Endless opportunities. Whether you're a first year undergraduate or working toward a PhD, our programs are designed to help you become the engineer you want to be.</p>  <p>Second paragraph</p>  <p><a href='#' class='ilw-button'>Sample button</a></p></div><div id='panel2'>    <p>Panel #2. There's a <a href='#'>link that goes somewhere</a> here.</p></div><div id='panel3'><p>Panel #3</p></div><div id='panel4'><p>Panel #4 There's a <a href='#'>link that goes somewhere</a> here.</p></div>"
+        }
+    ],
+    "attributes-fixed": [],
+    "attributes-text": [
+        {
+            "name": "default",
+            "description": "The ID of the tab that is open on load. This defaults to the first item in the list.",
+            "depreciated": false,
+            "value": ""
+        }
+    ],
+    "attributes": [
+        {
+            "name": "theme",
+            "description": "Color theme used. There is no orange theme because there would be a lot of bright colors on the screen.",
+            "depreciated": false,
+            "values": [
+                "",
+                "blue",
+                "gray",
+                "white"
+            ]
+        },
+        {
+            "name": "width",
+            "description": "Width -- constrained to the container (default), full width, or full width but text is constrained (auto), or text is constrained to the page width (page).",
+            "depreciated": false,
+            "values": [
+                "",
+                "full",
+                "auto",
+                "page"
+            ]
+        },
+        {
+            "name": "horizontal",
+            "description": "Whether or not to use the horizontal layout. Recommended to not use this unless there are a few tabs.",
+            "depreciated": false,
+            "values": [
+                "",
+                "true"
+            ]
+        }
+    ],
+    "classes-fixed": [],
+    "classes": [],
+    "css-variables": [
+        {
+			"name": "--ilw-tabs--color",
+			"depreciated": false,
+			"description": "Color of the default text in the tabs"
+		},
+        {
+			"name": "--ilw-tabs--display",
+			"depreciated": false,
+			"description": "Flex or block for the tabs list (controls horizontal or vertical layout)"
+		},
+        {
+			"name": "--ilw-tabs--background",
+			"depreciated": false,
+			"description": "Background color of the tab area"
+		},
+        {
+			"name": "--ilw-tabs--button--color",
+			"depreciated": false,
+			"description": "Button text color of the tab buttons"
+		},
+        {
+			"name": "--ilw-tabs--button--color--focus",
+			"depreciated": false,
+			"description": "Button text color of the tab buttons when focused"
+		},
+        {
+			"name": "--ilw-tabs--button--background--focus",
+			"depreciated": false,
+			"description": "Button background color of the tab buttons when focused"
+		},
+        {
+			"name": "--ilw-tabs--button--color--selected",
+			"depreciated": false,
+			"description": "Button text color of the selected tab button"
+		},
+        {
+			"name": "--ilw-tabs--button--background--selected",
+			"depreciated": false,
+			"description": "Button background color of the selected tab button"
+		},
+        {
+			"name": "--ilw-tabs--button--color--selected--focus",
+			"depreciated": false,
+			"description": "Button text color of the selected tab button when focused"
+		},
+        {
+			"name": "--ilw-tabs--button--background--selected--focus",
+			"depreciated": false,
+			"description": "Button background color of the selected tab button when focused"
+		},
+        {
+			"name": "--ilw-tabs--button--border",
+			"depreciated": false,
+			"description": "Border of the buttons and tab area for vertical and horizontal. Use standard CSS border layout"
+		},
+        {
+			"name": "--ilw-tabs--tablist--display",
+			"depreciated": false,
+			"description": "Flex or block for the tabs button list (controls horizontal or vertical layout)"
+		},
+        {
+			"name": "--ilw-tabs--tablist--width",
+			"depreciated": false,
+			"description": "Width of the tabs button list in vertical layout. Defaults to 350px."
+		}
+    ]
+}
