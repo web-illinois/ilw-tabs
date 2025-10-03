@@ -4,7 +4,7 @@
     "repository": "github:web-illinois/ilw-tabs",
     "private": false,
     "license": "MIT",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "type": "module",
     "files": [
         "src/**",
@@ -17,7 +17,7 @@
             "require": "./dist/ilw-tabs.cjs",
             "default": "./dist/ilw-tabs.js"
         },
-        "./ilw-filter.css": {
+        "./ilw-tabs.css": {
             "import": "./dist/ilw-tabs.css"
         }
     },
