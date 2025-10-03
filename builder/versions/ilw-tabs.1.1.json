@@ -6,7 +6,7 @@
     "element-name": "ilw-tabs",
     "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "builder-version": "1.1",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "date": "10/1/2025",
     "css": "https://cdn.toolkit.illinois.edu/ilw-tabs/1.1/ilw-tabs.css",
     "js": "https://cdn.toolkit.illinois.edu/ilw-tabs/1.1/ilw-tabs.js",
