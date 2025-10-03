@@ -7,7 +7,7 @@ export default defineConfig({
         outDir: "../dist/cdn",
         lib: {
             name: "ilw-tabs",
-            entry: "ilw-filter.ts",
+            entry: "ilw-tabs.ts",
             fileName: "ilw-tabs",
             formats: ["es"],
         }
