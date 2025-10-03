@@ -1,40 +1,9 @@
-<!doctype html>
-<html lang="en">
+import { expect, test } from "vitest";
+import { render } from "vitest-browser-lit";
+import { html } from "lit";
+import "../src/ilw-tabs";
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabs Component</title>
-    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/latest/ilw-global.css">
-    <script type="module" src="/src/ilw-tabs.js"></script>
-<script>
-  let componentName = 'ilw-tabs';
-  document.addEventListener("DOMContentLoaded", function(event) {
-    const params = new URLSearchParams(window.location.search);
-    document.querySelectorAll(componentName).forEach(component => {
-      for (const key of params.keys()) {
-        component.setAttribute(key, params.get(key));
-      }
-    });
-  });
-</script>
-
-<script type="module">
-    import { createVariations } from "@illinois-toolkit/ilw-core";
-    import Content from "../src/ilw-tabs.js";
-
-    createVariations(document.getElementById("tabs"), Content, {
-        theme: ["white", "gray", "orange", "blue", "orange-gradient", "blue-gradient"],
-        horizontal: [true, false]
-    }, [
-        "tabs"
-    ]);
-</script>
-
-</head>
-
-<body style="margin: 0 auto; padding: 0; max-width: 1200px;">
+const content = html`
     <ilw-tabs id="tabs">
         <div slot="tabs">
             <button role="tab" aria-controls="panel1">Tab #1</button>
@@ -62,7 +31,12 @@
         <div id="panel4">
             <p>Panel #4 There's a <a href="#">link that goes somewhere</a> here.</p>
         </div>
-    </ilw-tabs>
-</body>
+    </ilw-tabs>`;
 
-</html>
+test("renders slotted content", async () => {
+    const screen = render(content);
+    const element = screen.getByText("Degree Programs");
+    await expect(element).toBeInTheDocument();
+    const element2 = screen.getByText("Panel #2");
+    await !expect(element2).toBeInTheDocument();
+});

@@ -3,45 +3,11 @@ import { css } from 'lit';
 export default css `
     #container {
         display: var(--ilw-tabs--display);
-        background: var(--ilw-tabs--background);
+        background: var(--ilw-color--background);
         column-gap: 60px;
         margin: 0 auto;
         max-width: var(--ilw-tabs--max-width);
         padding: 60px 30px 75px;
-    }
-
-    #outer.white, #container.white {
-        --ilw-tabs--color: black;
-        --ilw-tabs--button-color: var(--il-blue);
-        --ilw-tabs--button-color--focus: white;
-        --ilw-tabs--focus-button-background: var(--il-blue);
-        --ilw-tabs--selected-button-color: var(--il-blue);
-        --ilw-tabs--selected-button-background: var(--il-orange);
-        --ilw-tabs--button-border: 2px solid var(--il-blue);
-    }
-    #outer.blue, #container.blue {
-        --ilw-tabs--color: white;
-        --ilw-tabs--background: var(--il-blue);
-        --ilw-tabs--button-color: white;
-        --ilw-tabs--button-border: 2px solid white;
-        --ilw-tabs--focus-button-color: var(--il-blue);
-        --ilw-tabs--focus-button-background: white;
-        --ilw-tabs--selected-button-color: white;
-        --ilw-tabs--selected-button-background: var(--il-orange);
-        --ilw-button--background-color: var(--il-blue);
-        --ilw-button--foreground-color: #fff;
-        --ilw-button--border-color: #fff;
-        --ilw-button--focused-background-color: #fff;
-        --ilw-button--focused-foreground-color: var(--il-blue);
-        --ilw-button--focused-border-color: #fff;
-    }
-
-    #outer.white {
-        --ilw-tabs--background: white;
-    }
-
-    #outer.gray {
-        --ilw-tabs--background: var(--il-storm-lighter-4);
     }
 
     #outer.full, #outer.auto {
@@ -53,11 +19,10 @@ export default css `
         position:relative;
         right:50%;
         width:100vw;
-        background: var(--ilw-tabs--background);
     }
 
     #outer.page {
-        background: var(--ilw-tabs--background);
+        background: var(--ilw-color--background);
     }
 
     #container.auto, #container.page {

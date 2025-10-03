@@ -1,12 +1,5 @@
 :root {
     --ilw-tabs--display: flex;
-    --ilw-tabs--color: black;
-    --ilw-tabs--button-color: var(--il-blue);
-    --ilw-tabs--focus-button-color: white;
-    --ilw-tabs--focus-button-background: var(--il-blue);
-    --ilw-tabs--selected-button-color: #fff;
-    --ilw-tabs--selected-button-background: var(--il-orange);
-    --ilw-tabs--button-border: 2px solid var(--il-blue);
     --ilw-tabs--tablist-display: flex;
     --ilw-tabs--tablist-width: 350px;
   }
@@ -15,12 +8,6 @@ ilw-tabs {
     display: block;
     position: relative;
     container-type: inline-size;
-    --ilw-button--background-color: #fff;
-    --ilw-button--foreground-color: var(--il-orange);
-    --ilw-button--border-color: var(--il-orange);
-    --ilw-button--focused-background-color: var(--il-orange);
-    --ilw-button--focused-foreground-color: #fff;
-    --ilw-button--focused-border-color: var(--il-orange);
 }
 
 ilw-tabs *[slot=tabs] {
@@ -31,36 +18,36 @@ ilw-tabs *[slot=tabs] {
 
 ilw-tabs *[role=tab] {
     display: inline-block;
-    background: var(--ilw-tabs--background);
-    color: var(--ilw-tabs--button-color);
+    background: var(--ilw-color--control);
+    color: var(--ilw-color--control-text);
     font-family: var(--il-font-sans);
     font-size: 1.1875rem;
     font-weight: 700;
     border: none;
     padding: .75em 1em;
-    border-bottom: var(--ilw-tabs--button-border);
+    border-bottom: 2px solid var(--ilw-color--control-text);
     text-align: left;
 }
 
 ilw-tabs *[role=tab]:first-of-type {
-  border-top: var(--ilw-tabs--button-border);
+  border-top: 2px solid var(--ilw-color--control-text);
 }
 
 ilw-tabs *[role=tab]:hover {
-      outline: none;
-      color: var(--ilw-tabs--focus-button-color);
-      background: var(--ilw-tabs--focus-button-background);
-}
-
-ilw-tabs *[role=tab][aria-selected="true"] {
-      color: var(--ilw-tabs--selected-button-color);
-      background: var(--ilw-tabs--selected-button-background);
+  outline: none;
+  color: var(--ilw-color--control);
+  background: var(--ilw-color--control-text);
 }
 
 ilw-tabs *[role=tab]:focus {
   background-color: var(--ilw-link--focus-background-color);
   color: var(--ilw-link--focus-color);
   outline: var(--ilw-link--focus-outline);
+}
+
+ilw-tabs *[role=tab][aria-selected="true"] {
+  color: var(--ilw-color--control-accent-text);
+  background: var(--ilw-color--control-accent);
 }
 
 ilw-tabs *[data-ilw-tab-visible="0"] {
@@ -73,6 +60,10 @@ ilw-tabs *[data-ilw-tab-visible="0"] {
     --ilw-tabs--tablist-width: auto;
     }
 
+  ilw-tabs[horizontal] *[slot=tabs] {
+    border-bottom: 2px solid var(--ilw-color--control-text);
+    }
+
   ilw-tabs[horizontal] *[role=tab] {
     border: none;
   }
@@ -81,26 +72,26 @@ ilw-tabs *[data-ilw-tab-visible="0"] {
     ilw-tabs *[role=tab] {
       display: var(--ilw-tabs--tablist-display);
       width: var(--ilw-tabs--tablist-width);
-      border-bottom: var(--ilw-tabs--button-border);
+      border-bottom: 2px solid var(--ilw-color--control-text);
     }
     ilw-tabs[horizontal] *[role=tab] {
       display: var(--ilw-tabs--tablist-display);
       width: var(--ilw-tabs--tablist-width);
-      border-bottom: var(--ilw-tabs--button-border);
+      border-bottom: 2px solid var(--ilw-color--control-text);
     }
 
     ilw-tabs *[role=tab]:first-of-type {
-      border-top: var(--ilw-tabs--button-border);
+      border-top: 2px solid var(--ilw-color--control-text);
     }
   }
 
   ilw-tabs.ilw-compact *[role=tab] {
     display: flex;
-    border-bottom: var(--ilw-tabs--button-border);
+    border-bottom: 2px solid var(--ilw-color--control-text);
   }
 
   ilw-tabs.ilw-compact *[role=tab]:first-of-type {
-    border-top: var(--ilw-tabs--button-border);
+    border-top: 2px solid var(--ilw-color--control-text);
   }
 
   ilw-tabs h2, ilw-tabs h3, ilw-tabs h4, ilw-tabs h5 {
@@ -109,7 +100,7 @@ ilw-tabs *[data-ilw-tab-visible="0"] {
   } 
 
   ilw-tabs h2, ilw-tabs h3, ilw-tabs h4, ilw-tabs h5, ilw-tabs p {
-    color: var(--ilw-tabs--color);
+    color: var(--ilw-color--text);
   } 
 
   ilw-tabs a {
