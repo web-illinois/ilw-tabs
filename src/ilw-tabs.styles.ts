@@ -7,7 +7,7 @@ export default css `
         column-gap: 60px;
         margin: 0 auto;
         max-width: var(--ilw-tabs--max-width);
-        padding: 60px 30px 75px;
+        padding: var(--ilw-tabs--padding, 60px 30px 75px);
     }
 
     #outer.full, #outer.auto {
@@ -26,8 +26,8 @@ export default css `
     }
 
     #container.auto, #container.page {
-        padding: 60px var(--ilw-content--main-margin, 0) 75px;
-        max-width: 1200px;
+        --ilw-tabs--padding: 60px var(--ilw-margin--side, 0) 75px;
+        --ilw-tabs--max-width: 1200px;
     }
 
     .horizontal #tablist {
@@ -40,11 +40,11 @@ export default css `
     }
 
     @container (max-width: 800px) {
-        #container {
+        #container, #container.auto, #container.page {
             --ilw-tabs--display: block;
             --ilw-tabs--tablist-display: flex;
             --ilw-tabs--tablist-width: auto;
-            padding: 60px 20px 75px;
+            --ilw-tabs--padding: 60px 20px 75px;
         }
 
         #tablist {
@@ -56,11 +56,11 @@ export default css `
         }
      }
     
-      #container.compact {
+    #container.compact, #container.compact.auto, #container.compact.page {
         --ilw-tabs--display: block;
         --ilw-tabs--tablist-display: flex;
         --ilw-tabs--tablist-width: auto;
-        padding: 60px 20px 75px;
+        --ilw-tabs--padding: 60px 20px 75px;
     }
 
     #container.compact #tablist {

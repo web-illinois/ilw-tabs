@@ -2,6 +2,8 @@
     --ilw-tabs--display: flex;
     --ilw-tabs--tablist-display: flex;
     --ilw-tabs--tablist-width: 350px;
+    --ilw-tabs--max-width: auto;
+    --ilw-tabs--padding: 60px 30px 75px;
   }
 
 ilw-tabs {

@@ -19,18 +19,11 @@
     });
   });
 </script>
-
-<script type="module">
-    import { createVariations } from "@illinois-toolkit/ilw-core";
-    import Content from "../src/ilw-tabs.js";
-
-    createVariations(document.getElementById("tabs"), Content, {
-        theme: ["white", "gray", "orange", "blue", "orange-gradient", "blue-gradient"],
-        horizontal: [true, false]
-    }, [
-        "tabs"
-    ]);
-</script>
+<style>
+    ilw-tabs {
+        --ilw-tabs--padding: 0;
+    }
+</style>
 
 </head>
 
