@@ -44,7 +44,6 @@ export default css `
             --ilw-tabs--display: block;
             --ilw-tabs--tablist-display: flex;
             --ilw-tabs--tablist-width: auto;
-            --ilw-tabs--padding: 60px 20px 75px;
         }
 
         #tablist {
