@@ -6,19 +6,20 @@
     "element-name": "ilw-tabs",
     "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
     "builder-version": "1.1",
-    "version": "1.1.3",
-    "date": "4/27/2026",
+    "version": "1.1.4",
+    "date": "5/22/2026",
     "css": "https://cdn.toolkit.illinois.edu/ilw-tabs/1.1/ilw-tabs.css",
     "js": "https://cdn.toolkit.illinois.edu/ilw-tabs/1.1/ilw-tabs.js",
     "production": true,
     "notes": "",
     "parent-style": "margin: 0 auto; max-width: 1200px;",
     "added-components" : [
-        { "name": "Content", 
-         "description": "The inset version of the content block can be used to format the text inside the tabs.", 
-         "link": "https://toolkit.illinois.edu/components/ilw-content/", 
-         "css": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-content.css", 
-         "js": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-content.js" 
+        { 
+           "name": "Content", 
+           "description": "The inset version of the content block can be used to format the text inside the tabs.", 
+           "link": "https://toolkit.illinois.edu/components/ilw-content/", 
+           "css": "https://cdn.toolkit.illinois.edu/ilw-content/1/ilw-content.css", 
+           "js": "https://cdn.toolkit.illinois.edu/ilw-content/1/ilw-content.js" 
         }
     ],
     "samples": [
@@ -26,6 +27,11 @@
             "name": "default",
             "description": "Default information",
             "text": "<div slot='tabs'><button role='tab' aria-controls='panel1'>Tab #1</button><button role='tab' aria-controls='panel2'>Tab #2</button><button role='tab' aria-controls='panel3'>Tab #3</button><button role='tab' aria-controls='panel4'>Tab #4</button></div><div id='panel1'>  <h3>Degree Programs</h3>  <p>There's no <a href='#'>academic experience</a> quite like Grainger Engineering. Ranked the #6 college of engineering with 13 top 5 programs from US News and World Report, we have a reputation of being the best of the best. But a lot goes into those numbers. Engaging professors. State-of-the-art facilities. Groundbreaking student resources. Brilliant classmates. Supportive environment. Endless opportunities. Whether you're a first year undergraduate or working toward a PhD, our programs are designed to help you become the engineer you want to be.</p>  <p>Second paragraph</p>  <p><a href='#' class='ilw-button'>Sample button</a></p></div><div id='panel2'>    <p>Panel #2. There's a <a href='#'>link that goes somewhere</a> here.</p></div><div id='panel3'><p>Panel #3</p></div><div id='panel4'><p>Panel #4 There's a <a href='#'>link that goes somewhere</a> here.</p></div>"
+        },
+        {
+            "name": "content",
+            "description": "With Content",
+            "text": "<div slot='tabs' role='tablist'><button role='tab' aria-controls='panel1'>Tab #1</button><button role='tab' aria-controls='panel2'>Tab #2</button><button role='tab' aria-controls='panel3'>Tab #3</button><button role='tab' aria-controls='panel4'>Tab #4</button></div><ilw-content id='panel1'>  <h3>Degree Programs</h3>  <p>There's no <a href='#'>academic experience</a> quite like Grainger Engineering. Ranked the #6 college of engineering with 13 top 5 programs from US News and World Report, we have a reputation of being the best of the best. But a lot goes into those numbers. Engaging professors. State-of-the-art facilities. Groundbreaking student resources. Brilliant classmates. Supportive environment. Endless opportunities. Whether you're a first year undergraduate or working toward a PhD, our programs are designed to help you become the engineer you want to be.</p>  <p>Second paragraph</p>  <p><a href='#' class='ilw-button'>Sample button</a></p></ilw-content><ilw-content id='panel2'>    <p>Panel #2. There's a <a href='#'>link that goes somewhere</a> here.</p></ilw-content><ilw-content id='panel3'><p>Panel #3</p></ilw-content><ilw-content id='panel4'><p>Panel #4 There's a <a href='#'>link that goes somewhere</a> here.</p></ilw-content>"
         }
     ],
     "attributes-fixed": [],
@@ -68,6 +74,15 @@
                 "",
                 "true"
             ]
+        },
+        {
+            "name": "rounded",
+            "description": "Whether or not to use rounded corners for the tabs.",
+            "depreciated": false,
+            "values": [
+                "",
+                "true"
+            ]
         }
     ],
     "classes-fixed": [],
@@ -97,6 +112,21 @@
 			"name": "--ilw-tabs--padding",
 			"depreciated": false,
 			"description": "Padding of the entire tab control. "
+		},
+        {
+			"name": "--ilw-tabs--border-radius",
+			"depreciated": false,
+			"description": "Border radius of the control. "
+		},
+        {
+			"name": "--ilw-tabs--color-control",
+			"depreciated": false,
+			"description": "Color of the control in a rounded tab."
+		},
+        {
+			"name": "--ilw-tabs--color-control-text",
+			"depreciated": false,
+			"description": "Color of the text in a rounded control. "
 		}
     ]
 }

@@ -4,7 +4,14 @@
     --ilw-tabs--tablist-width: 350px;
     --ilw-tabs--max-width: auto;
     --ilw-tabs--padding: 60px 30px 75px;
+    --ilw-tabs--border-radius: none;
   }
+
+ilw-tabs[rounded] {
+    --ilw-tabs--border-radius: 1.5rem;
+    --ilw-tabs--color-control: var(--il-storm-80);
+    --ilw-tabs--color-control-text: black;
+}
 
 ilw-tabs {
     display: block;
@@ -20,8 +27,8 @@ ilw-tabs *[slot=tabs] {
 
 ilw-tabs *[role=tab] {
     display: inline-block;
-    background: var(--ilw-color--control);
-    color: var(--ilw-color--control-text);
+    background: var(--ilw-tabs--color-control, var(--ilw-color--control));
+    color: var(--ilw-tabs--color-control-text, var(--ilw-color--control-text));
     font-family: var(--il-font-sans);
     font-size: 1.1875rem;
     font-weight: 700;
@@ -29,6 +36,8 @@ ilw-tabs *[role=tab] {
     padding: .75em 1em;
     border-bottom: 2px solid var(--ilw-color--control-text);
     text-align: left;
+    border-top-left-radius: var(--ilw-tabs--border-radius);
+    border-bottom-left-radius: var(--ilw-tabs--border-radius);
 }
 
 ilw-tabs *[role=tab]:first-of-type {
@@ -41,7 +50,7 @@ ilw-tabs *[role=tab]:hover {
   background: var(--ilw-color--control-text);
 }
 
-ilw-tabs *[role=tab]:focus {
+ilw-tabs *[role=tab][aria-selected="true"]:focus, ilw-tabs *[role=tab]:focus {
   background-color: var(--ilw-link--focus-background-color);
   color: var(--ilw-link--focus-color);
   outline: var(--ilw-link--focus-outline);
@@ -68,6 +77,9 @@ ilw-tabs *[data-ilw-tab-visible="0"] {
 
   ilw-tabs[horizontal] *[role=tab] {
     border: none;
+    border-top-left-radius: var(--ilw-tabs--border-radius);
+    border-top-right-radius: var(--ilw-tabs--border-radius);
+    border-bottom-left-radius: 0;
   }
 
   @container (max-width: 800px) {

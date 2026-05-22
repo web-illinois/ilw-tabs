@@ -56,6 +56,8 @@ The tabs are activated using the ARIA automatic tab pattern.
 
 Ensure that the buttons and panels are labelled correctly inside the component using the `id` and `aria-labelledby` attributes. IDs should be unique in the HTML document. 
 
+Use the `tab` and `tab-panel` and `tablist`
+
 A "nice-to-have" is to label the `ilw-tabs` component with a header using the `aria-labelledby` attribute. 
 
 ## External References
