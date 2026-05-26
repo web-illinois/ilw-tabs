@@ -18,6 +18,9 @@ export default class Tabs extends LitElement {
     @property({type: Boolean}) 
     horizontal: boolean = false;
 
+    @property({type: Boolean}) 
+    rounded: boolean = false;
+
     @property({type: Boolean, reflect: true }) 
     compact: boolean = true;
 
@@ -173,7 +176,7 @@ export default class Tabs extends LitElement {
         return html`
         <div id="outer" class="${this.theme} ${this.width} ${this.horizontal ? 'horizontal' : ''}">
             <div id="container" class="${this.theme} ${this.width}">
-                <div id="tablist" role="tablist">
+                <div id="tablist">
                     <slot name="tabs"></slot>
                 </div>
                 <div id="tabpanels">
