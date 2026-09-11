@@ -1,12 +1,21 @@
 {
-    "title": "Tabs",
-    "tag": "ilw-tabs",
-    "github": "https://github.com/web-illinois/ilw-tabs/",
-    "type": "web component",
-    "element-name": "ilw-tabs",
-    "description": "This is a tab component, where you have a bunch of buttons that trigger new content information inside a fixed area.",
-    "purpose": "Show content in a panel with tab navigation.",
-    "toolkit-version": "1.1",
-    "production-version": "1.1",
-    "development-version": "latest"
+  "title": "Tabs",
+  "id": "ilw-tabs",
+  "type": "Web Component",
+  "repository-name": "ilw-tabs",
+  "description": "Organize related content into accessible tabbed panels so visitors can switch views without leaving the page.",
+  "purpose": "Show content in a panel with tab navigation.",
+  "customtemplates": [],
+  "versions": [
+    {
+      "name": "1.0",
+      "notes": "",
+      "template": "1.0"
+    },
+    {
+      "name": "1.1",
+      "notes": "",
+      "template": "1.1"
+    }
+  ]
 }
