@@ -116,7 +116,3 @@ ilw-tabs *[data-ilw-tab-visible="0"] {
   ilw-tabs h2, ilw-tabs h3, ilw-tabs h4, ilw-tabs h5, ilw-tabs p {
     color: var(--ilw-color--text);
   } 
-
-  ilw-tabs a {
-    color: unset;
-  } 
